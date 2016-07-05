@@ -1,4 +1,14 @@
 
+server:
+  port: 9999
+
 this:
   is:
     only: for reservation service - default profile
+
+sprio:
+  message: Hello Spring IO ;) UPDATED
+
+graphite:
+  host: localhost
+  port: 2003
