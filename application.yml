@@ -4,16 +4,44 @@ generic:
 info:
   component: ${spring.application.name}
 
+---
+
 eureka:
   instance:
+    leaseRenewalIntervalInSeconds: 5
     metadataMap:
       cluster: sprio5
+  client:
+    region: default
+    registryFetchIntervalSeconds: 5
+
+logging:
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF
+---
 
 graphite:
   host: localhost
   port: 2003
 
+---
+
 spring:
   rabbitmq:
     host: localhost
     port: 5672
+
+---
+
+spring:
+  zipkin:
+    baseUrl: http://localhost:8020/
+  sleuth:
+    sampler:
+      percentage: 1.0
+    log:
+      json:
+        enabled: true
