@@ -1,0 +1,9 @@
+
+server:
+  port: 8010
+
+turbine:
+  aggregator:
+    clusterConfig: sprio5
+  appConfig: gatewayservice,registryservice,reservationclient
+  clusterNameExpression: metadata['cluster']
