@@ -9,6 +9,11 @@ this:
 sprio:
   message: Hello Spring IO ;) UPDATED
 
-graphite:
-  host: localhost
-  port: 2003
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: reservations
+          group: reservations
+          durableSubscription: true

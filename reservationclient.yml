@@ -1,3 +1,11 @@
 
 server:
   port: 9888
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: reservations
+          durableSubscription: true

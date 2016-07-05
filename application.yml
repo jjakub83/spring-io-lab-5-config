@@ -1,0 +1,19 @@
+generic:
+  prop: Applied for all services
+
+info:
+  component: ${spring.application.name}
+
+eureka:
+  instance:
+    metadataMap:
+      cluster: sprio5
+
+graphite:
+  host: localhost
+  port: 2003
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
